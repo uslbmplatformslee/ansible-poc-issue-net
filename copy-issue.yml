@@ -1,7 +1,7 @@
 ---
-- name: Copy a new "ntp.conf file into place, backing up the original if it differs from the copied version
+- name: Copy a new issue.net file into place, backing up the original if it differs from the copied version
   copy:
-    src: /srv/baseline/issue.net
+    src: issue.net
     dest: /etc/issue.net
     owner: root
     group: root

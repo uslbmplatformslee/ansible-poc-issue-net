@@ -1,5 +1,6 @@
 ---
 - name: Copy Base Files
+  hosts: all
   tasks:
     - name: Copy Issue and backup the old
       ansible.builtin.copy:

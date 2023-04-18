@@ -1,9 +1,11 @@
 ---
-- name: Copy a new issue.net file into place, backing up the original if it differs from the copied version
-  copy:
-    src: issue.net
-    dest: /etc/issue.net
-    owner: root
-    group: root
-    mode: '0644'
-    backup: yes
+- name: Copy Base Files
+  tasks:
+    - name: Copy Issue and backup the old
+      ansible.builtin.copy:
+        src: issue.net
+        dest: /etc/issue.net
+        owner: root
+        group: root
+        mode: '0644'
+        backup: yes
